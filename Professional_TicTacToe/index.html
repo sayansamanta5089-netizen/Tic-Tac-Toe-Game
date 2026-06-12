@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Professional Tic Tac Toe</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<button id="historyBtn">📜 History</button>
+
+<div id="historyPanel">
+<h2>Match History</h2>
+<div id="historyList"></div>
+<button onclick="clearHistory()">Clear History</button>
+</div>
+
+<div class="card">
+<h1>Tic Tac Toe Pro</h1>
+
+<select id="mode" onchange="toggleInputs()">
+<option value="ai">Player vs AI</option>
+<option value="pvp">Player vs Player</option>
+</select>
+
+<div id="aiInputs">
+<input id="player1" placeholder="Player Name">
+<select id="difficulty">
+<option>Easy</option>
+<option>Medium</option>
+<option>Hard</option>
+</select>
+</div>
+
+<div id="pvpInputs" style="display:none">
+<input id="player1pvp" placeholder="Player 1 Name">
+<input id="player2pvp" placeholder="Player 2 Name">
+</div>
+
+<button onclick="startGame()">Start Game</button>
+
+<h2 id="turn">Current Turn:</h2>
+
+<div id="board" class="board"></div>
+
+<h2 id="result">Game Not Started</h2>
+
+<button onclick="undoMove()">Undo Move</button>
+<button onclick="restartGame()">Restart Game</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
